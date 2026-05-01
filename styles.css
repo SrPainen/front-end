@@ -1,0 +1,288 @@
+html{
+    min-height: 100%;
+}
+body {
+
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+
+    background-color: #D5DBDB;
+
+    color: white;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 0.8rem 1rem;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    position: sticky;
+
+    top: 0;
+
+    gap: 0.75rem;
+
+    z-index: 1000
+
+}
+
+.flex-content {
+    flex: 1; /* Esto empuja al footer al fondo */
+}
+
+header .logo img {
+
+    margin: 40px;
+    max-width: 60px;
+
+}
+
+nav ul {
+    display: flex;
+
+    text-align: center;
+
+    flex-direction: column;
+
+    list-style-type: none;
+
+    line-height: 2.5;
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+
+nav ul li {margin: 0 20px;}
+
+nav ul li a {
+
+    display: block;
+
+    color: #333;
+
+    text-decoration: none;
+
+    padding: 10px 20px;
+
+    transition: background-color 0.3s;
+
+    border-radius: 4px;
+
+}
+
+.main-nav {
+    width: 100%;
+    display: none;
+}
+
+.main-nav.open {
+    display: block;
+}
+
+.nav-toggle span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: black;
+    border-radius: 999px;
+}
+
+@media (min-width: 768px) {
+    .site-header {
+        flex-wrap: nowrap;
+    }
+
+    .nav-toggle span {
+        display: none;
+    }
+
+    .main-nav {
+        display: block;
+        width: auto;
+    }
+
+    .main-nav ul {
+        flex-direction: row;
+    }
+
+    .main-nav a {
+        padding: 0.5rem 1rem;
+    }
+}
+
+nav ul li a:hover {
+    background-color: #6E00B3;
+    color: white;
+}
+
+
+.contenido {
+
+    padding: 20px;
+}
+
+.contenido article {
+
+    margin-bottom: 20px;
+
+}
+
+.contenido article img {
+
+    max-width: 100%;
+
+    height: auto;
+
+}
+
+.nav-toggle {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.25rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: none;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+}
+
+footer {
+
+    background-color: #D5DBDB;
+    color: black;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+
+}
+
+.redes-sociales img {
+
+    width: 30px;
+
+    margin: 0 10px;
+
+}
+
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6));
+    background-size: cover;
+    background-position: center;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.btn-hero {
+    display: inline-block;
+    background-color: #6E00B3;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 30px;
+    margin-top: 20px;
+}
+
+.info-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 50px 10%;
+    justify-content: center;
+}
+
+.info-card {
+    flex: 1;
+    min-width: 280px;
+    max-width: 350px;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+
+    text-align: center;
+}
+
+.info-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.info-card h3 {
+    color: #6E00B3;
+    margin-bottom: 10px;
+}
+
+.seccion-mixta {
+    padding: 60px 10%;
+    background-color: #f9f9f9;
+}
+
+.contenedor-mixto {
+    display: flex;
+    align-items: center; 
+    gap: 50px;         
+    flex-wrap: wrap;    
+}
+
+.imagen-lado {
+    flex: 1;
+    min-width: 300px; 
+}
+
+.imagen-lado img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px; 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.texto-lado {
+    flex: 1;
+    min-width: 300px;
+}
+
+.texto-lado h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.texto-lado p {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Botón opcional */
+.btn-leer-mas {
+    display: inline-block;
+    margin-top: 20px;
+    color: #6E00B3;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 2px solid #6E00B3;
+}

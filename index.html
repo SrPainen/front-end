@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voces del Cosmos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="flex-content">
+
+        <header class="site-header">
+            <div class="brand">
+                <a href="#inicio"><img src="img\lo-Photoroom.png" class="rounded float-start" alt="img" width="150"></a>
+            </div>
+
+            <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+            </button>
+
+            <nav class="main-nav" id="main-nav">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+
+        </header>
+
+        <main>
+
+        <section class="hero", id="inicio">
+            <div class="hero-content">
+                <img src="img\espacio1.png">
+            </div>
+        </section>
+
+        <section class="info-container", id="servicios">
+            <article class="info-card">
+                <img src="img\Planet_collage_to_scale.jpg">
+                <h3>Observación planetaria</h3>
+                <p>Telescopios para la observación de planetas y Luna.</p>
+                <a href="#observacion-planetaria" class="btn-leer-mas">más información</a>
+            </article>
+
+            <article class="info-card">
+                <img src="img\espacio2.jpg">
+                <h3>Cielo Profundo</h3>
+                <p>Telescopios para la observación de galaxias y nebulosas.</p>
+                <a href="#cielo-profundo" class="btn-leer-mas">más información</a>
+            </article>
+
+            <article class="info-card">
+                <img src="img\Astrofotografía.jpg">
+                <h3>Astrofotografía</h3>
+                <p>Telescopios para astrofotografía de cielo profundo y planetas.</p>
+                <a href="#Astrofotografía" class="btn-leer-mas">más información</a>
+            </article>
+        </section>
+
+        <section class="seccion-mixta", id="observacion-planetaria">
+            <div class="contenedor-mixto">
+                <div class="imagen-lado">
+                    <img src="img\planeta 3.png">
+                </div>
+                <div class="texto-lado">
+                    <h2>PY70F10 Telescopio</h2>
+                    <p>El PY70F10 es perfecto para quienes quieren un telescopio compacto de observación planetaria, observa los cráteres de la luna en gran detalle, descubre los anillos de Saturno o las lunas de Júpiter. El PY70F10 es el telescopio ideal para quienes quieren adentrarse en el mundo de la observación planetaria.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion-mixta", id="cielo-profundo">
+            <div class="contenedor-mixto">
+                <div class="imagen-lado">
+                    <img src="img\planeta 1.png">
+                </div>
+                <div class="texto-lado">
+                    <h2>DS70F7 Telescopio</h2>
+                    <p>El DS70F7 es un telescopio compacto y versátil que permitirá la observación de objetos difusos, así como nebulosas grandes y cúmulos galácticos, apto para observación lunar a bajo aumento.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion-mixta", id="Astrofotografía">
+            <div class="contenedor-mixto">
+                <div class="imagen-lado">
+                    <img src="img\planeta 2.jpg">
+                </div>
+                <div class="texto-lado">
+                    <h2>I80F6 Telescopio</h2>
+                    <p>Inspirado en el DS80F9, este telescopio trae lo mejor de la tecnología óptica aplicado a los telescopios MAXSCOPE. Este telescopio ofrece la mejor calidad óptica para ser un doblete acromático. Su revestimiento anti reflectante múltiple le permite alcanzar una transmitancia del 97%. Muy superior a otros productos en el mercado. Este telescopio es excepcional para astrofotografía de cielo profundo, nebulosas, cúmulos estelares, galaxias y mucho más. Incluso, podrás ver los planetas como Saturno y sus anillos en gran detalle.</p>
+                </div>
+            </div>
+        </section>
+
+        </main>
+    </div>
+    <footer id="contacto">
+
+        <p>Av. Pedro Aguirre Cerda 2115, 5090000 Valdivia, Los Ríos</p>
+        <p>vocesdelcosmos@empresa.com</p>
+        <p>+56 9 1234 5678</p>
+        <div class="redes-sociales">
+            <a href="https://www.facebook.com/?locale=es_LA"><img src="img\face.png" alt="Facebook"></a>
+            <a href="https://x.com/?lang=es"><img src="img\X_logo.png" alt="Twitter"></a>
+            <a href="https://www.instagram.com/?hl=es"><img src="img\insta.png" alt="Instagram"></a>
+        </div>
+
+    </footer>
+    <script>
+        const navToggle = document.querySelector('.nav-toggle');
+        const mainNav = document.querySelector('.main-nav');
+
+        navToggle.addEventListener('click', () => {
+            const isOpen = mainNav.classList.toggle('open');
+            navToggle.setAttribute('aria-expanded', String(isOpen));
+        });
+    </script>
+</body>
+
+</html>

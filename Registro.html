@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="flex-content">
+        <header class="site-header">
+            <div class="brand">
+                <a href="http://127.0.0.1:3000/front-end/index.html"><img src="img\lo-Photoroom.png" class="rounded float-start" alt="img" width="150"></a>
+            </div>
+
+            <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+            </button>
+
+            <nav class="main-nav" id="main-nav"> 
+                <ul>
+                    <li><a href="http://127.0.0.1:3000/front-end/index.html">Inicio</a></li>
+                    <li><a href="http://127.0.0.1:3000/front-end/index.html#servicios">Servicios</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                    <li><a href="http://127.0.0.1:3000/front-end/Registro.html">Registro</a></li>
+                </ul>
+            </nav>
+
+        </header>
+
+        <main id = "registro">
+            <div class="container">
+        <div class="form-wrapper">
+            <form>
+            <fieldset>
+                <h1>Registro</h1>
+                
+                <div class="form-group">
+                <label for="iCorreo" class="form-label">Correo</label>
+                <input type="email" class="form-control" id="iCorreo" placeholder="nombre@ejemplo.com" required>
+                <span class="form-error" data-error-for="email" style="color: red; font-size: 0.85rem;"></span>
+                </div>
+                
+                <div class="form-group">
+                <label for="nombredeusuario" class="form-label">Nombre de usuario</label>
+                <input type="text" class="form-control" id="nombredeusuario" required>
+                <span class="form-error" data-error-for="usuario" style="color: red; font-size: 0.85rem;"></span>
+                </div>
+                
+                <div class="form-group">
+                <label for="iDirecion" class="form-label">Dirección</label>
+                <input type="text" class="form-control" id="iDirecion" required>
+                <span class="form-error" data-error-for="direccion" style="color: red; font-size: 0.85rem;"></span>
+                </div>
+                
+                <div class="form-group">
+                <label for="iContraseña" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="iContraseña" required>
+                <span class="form-error" data-error-for="password" style="color: red; font-size: 0.85rem;"></span>
+                </div>
+                
+                <button type="submit" class="btn-primary">Registrarse</button>
+            </fieldset>
+            </form>
+        </div>
+    </div>
+        </main>
+    </div>
+
+    <footer id="contacto">
+
+        <p>Av. Pedro Aguirre Cerda 2115, 5090000 Valdivia, Los Ríos</p>
+        <p>vocesdelcosmos@empresa.com</p>
+        <p>+56 9 1234 5678</p>
+        <div class="redes-sociales">
+            <a href="https://www.facebook.com/?locale=es_LA"><img src="img\face.png" alt="Facebook"></a>
+            <a href="https://x.com/?lang=es"><img src="img\X_logo.png" alt="Twitter"></a>
+            <a href="https://www.instagram.com/?hl=es"><img src="img\insta.png" alt="Instagram"></a>
+        </div>
+
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        const navToggle = document.querySelector('.nav-toggle');
+        const mainNav = document.querySelector('.main-nav');
+
+        navToggle.addEventListener('click', () => {
+            const isOpen = mainNav.classList.toggle('open');
+            navToggle.setAttribute('aria-expanded', String(isOpen));
+        });
+    </script>
+</body>
+</html>
+
